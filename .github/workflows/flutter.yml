@@ -1,0 +1,31 @@
+name: Build flutter app
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Read flutter version from pubspec.yaml
+        run: sudo apt update &&
+          sudo apt install snapd &&
+          sudo snap install yq &&
+          echo "FLUTTER_VERSION=$(yq -r .environment.flutter pubspec.yaml)" >> "$GITHUB_ENV"
+      - name: Flutter action
+        uses: subosito/flutter-action@v2.8.0
+        with:
+          flutter-version: ${{env.FLUTTER_VERSION}}
+      - name: Double check flutter version
+        run: flutter --version
+      - name: Get dependencies
+        run: flutter pub get
+      - name: Check dart code formatting
+        run: dart format . -l 120
+      - name: Run tests
+        run: flutter test
