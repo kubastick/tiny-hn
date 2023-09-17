@@ -1,0 +1,7 @@
+{
+  "app_name": "TinyHackerNews",
+  "home": {
+    "app_bar_title": "TinyHN",
+    "hello_world": "Hello world"
+  }
+}
