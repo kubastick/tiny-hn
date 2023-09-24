@@ -18,7 +18,7 @@ Future<void> main() async {
       path: 'assets/translations',
       fallbackLocale: const Locale('en'),
       child: HookedBlocConfigProvider(
-        injector: getIt.get,
+        injector: () => getIt.get,
         child: const App(),
       ),
     ),

@@ -5,8 +5,10 @@ import 'dart:io';
 import 'package:easy_localization/src/localization.dart';
 import 'package:easy_localization/src/translations.dart';
 import 'package:flutter/material.dart';
+import 'package:golden_toolkit/golden_toolkit.dart';
 
 Future<void> testExecutable(FutureOr<void> Function() testMain) async {
+  await loadAppFonts();
   await _loadTranslationIntoEasyLocalization();
   await testMain();
 }
