@@ -27,5 +27,9 @@ jobs:
         run: flutter pub get
       - name: Check dart code formatting
         run: dart format . -l 120
+      - name: Generate translation keys
+        run: flutter pub run easy_localization:generate -S ./assets/translations -f keys -o locale_keys.g.dart
+      - name: Run build_runner
+        run: flutter pub run build_runner build --delete-conflicting-outputs
       - name: Run tests
         run: flutter test
