@@ -33,6 +33,7 @@ dev_dependencies:
     sdk: flutter
   freezed: 2.4.1
   go_router_builder: 2.3.3
+  golden_toolkit: ^0.15.0
   injectable_generator: 2.4.0
   json_serializable: 6.7.1
   mockito: 5.4.2

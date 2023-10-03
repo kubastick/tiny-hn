@@ -2,6 +2,9 @@
   "app_name": "TinyHackerNews",
   "home": {
     "app_bar_title": "TinyHN",
-    "hello_world": "Hello world"
+    "hello_world": "Hello world",
+    "cart_card": {
+      "xpoints_points_by_xusername_xcommentcount_comments": "{points} points by {username} | {commentCount} comments"
+    }
   }
 }

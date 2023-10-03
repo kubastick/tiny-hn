@@ -1,5 +1,5 @@
 # TinyHN - Tiny HackerNews - Flutter Client App
-A Tiny [HackerNews](https://news.ycombinator.com/news) client app created for fun using Flutter.
+A Tiny [HackerNews](https://news.ycombinator.com/news) client app created for fun using Flutter.  
 Work in progress
 
 ## Goals/non-goals of this project

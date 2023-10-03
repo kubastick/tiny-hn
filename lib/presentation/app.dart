@@ -19,6 +19,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.hackerNewsHeaderColor,
+          brightness: Brightness.dark,
         ),
         useMaterial3: true,
       ),
