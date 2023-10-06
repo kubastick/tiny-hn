@@ -16,6 +16,6 @@ abstract class HackerNewsDataSource extends ChopperService {
 
   @Get(path: 'item/{id}.json')
   Future<Response<Map<String, dynamic>>> getItem({
-    @Path() required int id,
+    @Path() required String id,
   });
 }

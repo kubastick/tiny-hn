@@ -9,7 +9,7 @@ class StoryItemDTOMapper implements BiDirectionalDataMapper<Story, ItemDTO> {
   Story from(ItemDTO data) {
     return Story(
       id: data.id.toString(),
-      authorUsername: data.by,
+      authorUsername: data.by ?? 'Unknown',
       commentCount: data.descendants ?? 0,
       commentIDs: data.kids ?? [],
       score: data.score ?? 0,
