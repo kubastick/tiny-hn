@@ -9,9 +9,9 @@ class ItemDTO {
     required this.id,
     required this.deleted,
     required this.type,
-    required this.by,
     required this.time,
     required this.dead,
+    this.by,
     this.text,
     this.parent,
     this.poll,
@@ -29,10 +29,10 @@ class ItemDTO {
   @JsonKey(defaultValue: false)
   final bool deleted;
   final ItemTypeDTO type;
-  final String by;
   final int time;
   @JsonKey(defaultValue: false)
   final bool dead;
+  final String? by;
   final String? text;
   final int? parent;
   final int? poll;

@@ -4,7 +4,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 import 'package:tiny_hn/generated/locale_keys.g.dart';
 import 'package:tiny_hn/presentation/pages/home/home_page_cubit.dart';
-import 'package:tiny_hn/presentation/pages/home/widgets/story_card.dart';
+import 'package:tiny_hn/presentation/routing/router.dart';
+import 'package:tiny_hn/presentation/widgets/story_card.dart';
 
 class HomePage extends HookWidget {
   const HomePage({
@@ -40,9 +41,16 @@ class HomePage extends HookWidget {
               itemCount: state.stories.length,
               itemBuilder: (context, index) {
                 final story = state.stories[index];
+
                 return StoryCard(
                   story: story,
                   naturalIndex: index + 1,
+                  onCommentsPressed: () {
+                    StoryCommentsRoute(
+                      storyID: story.id,
+                      $extra: story,
+                    ).go(context);
+                  },
                 );
               },
             ),

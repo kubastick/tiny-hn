@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:tiny_hn/domain/hacker_news/models/story.dart';
-import 'package:tiny_hn/presentation/pages/home/widgets/story_card.dart';
+import 'package:tiny_hn/presentation/widgets/story_card.dart';
 
-import '../../../utils/widget_tester_utils.dart';
+import '../../utils/widget_tester_utils.dart';
 
 void main() {
   group(
